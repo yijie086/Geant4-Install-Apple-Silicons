@@ -94,7 +94,7 @@ cd build
 `/Users/<YOUR USER NAME>` is the `home` directory from which any terminal session starts. 
 
 ```
-cmake -S /Users/<YOUR USER NAME>/geant4 -DCMAKE_INSTALL_PREFIX=/Users/wangyijie/geant4-v11.1.0-install -DCMAKE_BUILD_TYPE=RelWithDebInfo -DGEANT4_USE_GDML=ON -DGEANT4_BUILD_MULTITHREADED=ON -DXERCESC_ROOT_DIR=/opt/homebrew/Cellar/xerces-c/3.2.4_1 -DGEANT4_USE_QT=ON -DGEANT4_INSTALL_EXAMPLES=ON -DGEANT4_INSTALL_DATA=ON -DGEANT4_USE_SYSTEM_EXPAT=OFF -DGEANT4_BUILD_TLS_MODEL=auto ../geant4
+cmake -S /Users/<YOUR USER NAME>/geant4 -DCMAKE_INSTALL_PREFIX=/Users/<YOUR USER NAME>/geant4-v11.1.0-install -DCMAKE_BUILD_TYPE=RelWithDebInfo -DGEANT4_USE_GDML=ON -DGEANT4_BUILD_MULTITHREADED=ON -DXERCESC_ROOT_DIR=/opt/homebrew/Cellar/xerces-c/<YOUR VERSION NUMBER> -DGEANT4_USE_QT=ON -DGEANT4_INSTALL_EXAMPLES=ON -DGEANT4_INSTALL_DATA=ON -DGEANT4_USE_SYSTEM_EXPAT=OFF -DGEANT4_BUILD_TLS_MODEL=auto ../geant4
 ```
 
 #### Run the build with 8 cores
@@ -111,17 +111,37 @@ Now, you have installed `Geant4`.
 
 ## Run Test
 
-#### Copy the `B1` Example
+#### Change the environment variables
 
+```
+export G4NEUTRONHPDATA=/Users/<YOUR USER NAME>/geant4-v11.1.0-install/share/Geant4/data/G4NDL4.7
+export G4LEDATA=/Users/<YOUR USER NAME>/geant4-v11.1.0-install/share/Geant4/data/G4EMLOW8.2
+export G4LEVELGAMMADATA=/Users/<YOUR USER NAME>/geant4-v11.1.0-install/share/Geant4/data/PhotonEvaporation5.7
+export G4RADIOACTIVEDATA=/Users/<YOUR USER NAME>/geant4-v11.1.0-install/share/Geant4/data/RadioactiveDecay5.6
+export G4PARTICLEXSDATA=/Users/<YOUR USER NAME>/geant4-v11.1.0-install/share/Geant4/data/G4PARTICLEXS4.0
+export G4PIIDATA=/Users/<YOUR USER NAME>/geant4-v11.1.0-install/share/Geant4/data/G4PII1.3
+export G4REALSURFACEDATA=/Users/<YOUR USER NAME>/geant4-v11.1.0-install/share/Geant4/data/RealSurface2.2
+export G4SAIDXSDATA=/Users/<YOUR USER NAME>/geant4-v11.1.0-install/share/Geant4/data/G4SAIDDATA2.0
+export G4ABLADATA=/Users/<YOUR USER NAME>/geant4-v11.1.0-install/share/Geant4/data/G4ABLA3.1
+export G4INCLDATA=/Users/<YOUR USER NAME>/geant4-v11.1.0-install/share/Geant4/data/G4INCL1.0
+export G4ENSDFSTATEDATA=/Users/<YOUR USER NAME>/geant4-v11.1.0-install/share/Geant4/data/G4ENSDFSTATE2.3
+```
+#### Copy the `B1` Example
 ```
 cp /Users/<YOUR USER NAME>/geant4-v11.1.0-install/share/Geant4/examples/basic/B1 /Users/<YOUR USER NAME>/Downloads
 cd /Users/<YOUR USER NAME>/Downloads/B1
+```
+#### `Make` the `B1` Example
+```
 cmake .
 make -f Makefile
+```
+#### Run the `B1` Example
+```
 ./exampleB1
 ```
 
-Type in the session:
+#### Type in the session:
 
 ```
 /run/beamOn 100
