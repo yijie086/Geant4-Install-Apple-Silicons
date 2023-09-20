@@ -4,7 +4,7 @@ Describe how to install Geant4 on a Mac with Apple Silicons.
 # Manual Installation of Geant4 on a Mac with Apple Silicons
 
 The following steps have been tested with a Mac Studio (M2 Max Chip, macOS 13.5.2), for Geant4 11.1.0.
-And mainly refer to [Manual installation on macOS (with M series chip)](http://geant4-dna.in2p3.fr/styled-6/styled-12/index.html) 
+And the main reference is [Manual installation on macOS (with M series chip)](http://geant4-dna.in2p3.fr/styled-6/styled-12/index.html) 
 
 
 ## Dependences
