@@ -128,7 +128,7 @@ export G4ENSDFSTATEDATA=/Users/<YOUR USER NAME>/geant4-v11.1.0-install/share/Gea
 ```
 #### Copy the `B1` Example
 ```
-cp /Users/<YOUR USER NAME>/geant4-v11.1.0-install/share/Geant4/examples/basic/B1 /Users/<YOUR USER NAME>/Downloads
+cp -r /Users/<YOUR USER NAME>/geant4-v11.1.0-install/share/Geant4/examples/basic/B1 /Users/<YOUR USER NAME>/Downloads
 cd /Users/<YOUR USER NAME>/Downloads/B1
 ```
 #### `Make` the `B1` Example
