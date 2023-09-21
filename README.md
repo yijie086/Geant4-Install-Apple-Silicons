@@ -103,7 +103,22 @@ cmake -S /Users/<YOUR USER NAME>/geant4 -DCMAKE_INSTALL_PREFIX=/Users/<YOUR USER
 cmake --build . --target install -- -j8
 ```
 
+#### Source `geant4.sh`
 
+```
+source ~/geant4-v11.1.0-install/bin/geant4.sh
+```
+
+To avoid doing this everytime, you can add it to `~/.zshrc`:
+
+```
+vi ~/.zshrc
+```
+
+and add a line:
+```
+source ~/geant4-v11.1.0-install/bin/geant4.sh
+```
 
 Now, you have installed `Geant4`.
 
